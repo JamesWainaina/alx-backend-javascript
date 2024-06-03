@@ -1,4 +1,4 @@
-import createReportObject from './12-createReportObject.js';
+import createReportObject from './12-createReportObject';
 export default function createIteratorObject(report){
   //Generator function to yiels each employee
   function* employeeIterator(){

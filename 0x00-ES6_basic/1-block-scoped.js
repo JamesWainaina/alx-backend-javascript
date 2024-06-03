@@ -7,6 +7,5 @@ export default function taskBlock(trueOrFalse) {
     // but if necessary, modify the return
     // or implementation logic here
   }
-
   return [task, task2];
 }

@@ -3,7 +3,7 @@ export default function getListStudents() {
     {
       id: 1,
       fistName: 'Guillaume',
-      location: 'Snn Fransisco',
+      location: 'Snan Fransisco',
     },
     {
       id: 2,

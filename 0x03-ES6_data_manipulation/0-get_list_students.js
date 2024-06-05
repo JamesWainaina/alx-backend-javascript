@@ -1,4 +1,4 @@
-export default function getListStudents() {
+function getListStudents() {
   return [
     {
       id: 1,
@@ -14,6 +14,7 @@ export default function getListStudents() {
       id: 5,
       firstName: 'Serena',
       location: 'San Francisco',
-    },
+    }
   ];
 }
+export default getListStudents;

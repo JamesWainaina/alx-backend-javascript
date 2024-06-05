@@ -2,17 +2,17 @@ export default function getListStudents() {
   return [
     {
       id: 1,
-      fistName: 'Guillaume',
+      firstName: 'Guillaume',
       location: 'Snan Fransisco',
     },
     {
       id: 2,
-      fistName: 'James',
+      firstName: 'James',
       location: 'Columbia',
     },
     {
       id: 5,
-      fistName: 'Serena',
+      firstName: 'Serena',
       location: 'San Francisco',
     },
   ];

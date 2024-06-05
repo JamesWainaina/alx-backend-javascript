@@ -1,3 +1,4 @@
+
 {
   "scripts": {
     "lint": "./node_modules/.bin/eslint",
@@ -17,3 +18,4 @@
     "jest": "^24.9.0"
   }
 }
+

@@ -1,4 +1,4 @@
-class car {
+class Car {
   constructor(brand, motor, color) {
     this._brand = brand;
     this._motor = motor;
@@ -9,4 +9,4 @@ class car {
     return new this.constructor(this._brand, this._motor, this._color);
   }
 }
-export default car;
+export default Car;

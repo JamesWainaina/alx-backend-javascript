@@ -1,18 +1,28 @@
-const assert = require('assert');
-const calculateNumber = require('./0-calcul');
+const calculateNumber = require("./0-calcul.js");
+const assert = require("assert");
 
-
-
-describe('calculateNumber', function(){
-  const testCalculateNumber = ({a, b , expected}) => {
-    const result = calculateNumber(a, b);
-    assert.equal(result, expected);
-  };
-
-  it("correctly adds 1 and 2", function () {
-    testCalculateNumber({a: 1, b: 2, expected: 3 });
+describe("calculateNumber", () => {
+  it("rounding of a", () => {
+    assert.equal(calculateNumber(14.69, 3), 18);
+    assert.equal(calculateNumber(9.3, 0), 9);
+    assert.equal(calculateNumber(4.5, 5), 10);
+    assert.equal(calculateNumber(-4.4, 5), 1);
+    assert.equal(calculateNumber(-9.7, 0), -10);
   });
-  it("correctly adds 1.3 and 3.7", function () {
-    testCalculateNumber({a: 1.3, b: 3.7, expected: 5 });
+
+  it("rounding of b", () => {
+    assert.equal(calculateNumber(3, 14.69), 18);
+    assert.equal(calculateNumber(0, 9.3), 9);
+    assert.equal(calculateNumber(5, 4.5), 10);
+    assert.equal(calculateNumber(0, -4.4), -4);
+    assert.equal(calculateNumber(0, -9.7), -10);
+  });
+
+  it("suming of a and b", () => {
+    assert.equal(calculateNumber(14.69, 3.5), 19);
+    assert.equal(calculateNumber(9.3, 0.5), 10);
+    assert.equal(calculateNumber(4.5, 5.7), 11);
+    assert.equal(calculateNumber(-4.4, -5.7), -10);
+    assert.equal(calculateNumber(-9.7, -0.5), -10);
   });
 });

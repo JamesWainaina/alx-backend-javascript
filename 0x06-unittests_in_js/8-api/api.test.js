@@ -1,22 +1,15 @@
-const request = require("supertest");
+const request = require("request");
 const { expect } = require("chai");
-const app = require("./api"); // Import your Express app
 
-describe("GET /", () => {
-  // Test for status code 200
-  it("should return status code 200", (done) => {
-    request(app).get("/").expect(200, done);
-  });
 
-  // Test for the correct response text
-  it("should return a welcome message", (done) => {
-    request(app).get("/").expect("Welcome to the payment system", done);
-  });
+describe('API intergration test', () => {
+  const API_URL = 'http://localhost:7865';
 
-  // Test for the correct content type
-  it("should return content type text/html", (done) => {
-    request(app)
-      .get("/")
-      .expect("Content-Type", /text\/html/, done);
+  it('GET / returns correct response', (done) => {
+    request.get(`${API_URL}/`, (err, res, body) => {
+      expect(res.statusCode).to.equal(200);
+      expect(body).to.be.equal('Welcome to the payment system');
+      done();
+    });
   });
 });

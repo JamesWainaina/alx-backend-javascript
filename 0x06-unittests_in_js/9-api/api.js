@@ -6,7 +6,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to the payment system" ); // Example JSON response
 });
 
-app.get("/cart/:id(\\d+)", (req, res) => {
+app.get("", (req, res) => {
   const id = req.params.id;
 
   res.send(`Payment methods for cart ${id}`);
